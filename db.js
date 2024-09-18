@@ -24,11 +24,11 @@ module.exports = {
 const mongoose = require('mongoose');
 
 async function getDatabase(){
-    mongoose.connect('mongodb://127.0.0.1:27017/library')
+    mongoose.connect('mongodb+srv://dhara:dharashree2005@cluster0.3xybl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(()=>{
         console.log("connection success");
-    }).catch(()=>{
-        console.log("connection failed");
+    }).catch((err)=>{
+        console.log("connection failed",err);
     })
 }
 
